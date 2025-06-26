@@ -1,0 +1,36 @@
+<div
+  class="relative w-screen h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800 flex items-center justify-center">
+
+  <!-- right upper border -->
+  <div
+    class="absolute top-0 right-0 w-52 h-52 border-t-8 border-r-8 border-cyan-400 rounded-bl-[4rem] opacity-90 blur-sm drop-shadow-[0_0_20px_rgba(34,211,238,0.8)] pointer-events-none z-10 animate-pulse-glow-strong"></div>
+
+  <!-- left bottom border -->
+  <div
+    class="absolute bottom-0 left-0 w-52 h-52 border-b-8 border-l-8 border-purple-500 rounded-tr-[4rem] opacity-90 blur-sm drop-shadow-[0_0_20px_rgba(168,85,247,0.8)] pointer-events-none z-10 animate-pulse-glow-strong"></div>
+
+  <div
+    id="brand"
+    #brand
+    class="z-20 flex flex-col items-center justify-center text-center transform transition-transform duration-100 ease-in-out will-change-transform"
+  >
+    <img
+      src="assets/logo_png.png"
+      alt="VortexValor"
+      class="w-72 max-w-full drop-shadow-lg no-drag"
+      draggable="false"
+      #logo
+
+    />
+
+    <a
+      (click)="onStartClick()"
+      (keydown.enter)="onStartClick()"
+      tabindex="0"
+      role="button"
+      class="z-50 -mt-2 md:-mt-12 lg:-mt-16 text-4xl font-extrabold text-white bg-[#1b1f24] border-4 border-[#0e2b3a] px-10 py-4 rounded-xl hover:shadow-[0_0_35px_#36e3ff] hover:bg-[#0f3d4a] transition duration-300 ease-in-out cursor-pointer"
+    >
+      {{ 'START' | translate }}
+    </a>
+  </div>
+</div>

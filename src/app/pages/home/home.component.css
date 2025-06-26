@@ -1,0 +1,39 @@
+html{
+  height:100%
+}
+
+#brand{
+  text-align:center;
+  cursor:pointer;
+}
+#brand img{
+  display:block;
+  width:80vw;
+  max-width:700px;
+  height:auto;
+  transition:0.2s
+}
+
+@keyframes pulse-glow-strong {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+    filter: blur(12px) drop-shadow(0 0 15px rgba(0, 255, 255, 0.3));
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+    filter: blur(14px) drop-shadow(0 0 35px rgba(0, 255, 255, 0.9));
+  }
+}
+
+.animate-pulse-glow-strong {
+  animation: pulse-glow-strong 5s ease-in-out infinite;
+}
+
+img.no-select {
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
