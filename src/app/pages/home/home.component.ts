@@ -37,9 +37,6 @@ export class HomeComponent implements AfterViewInit, OnInit {
       return;
     }
 
-    const brandElement = this.brandRef.nativeElement as HTMLElement;
-    const startButton = brandElement.querySelector('a') as HTMLElement;
-
     if (this.logoRef?.nativeElement) {
       this.swing(this.logoRef.nativeElement as HTMLElement);
     }
