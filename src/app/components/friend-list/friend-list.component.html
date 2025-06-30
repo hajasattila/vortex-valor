@@ -1,0 +1,20 @@
+<!-- friend-list.component.html -->
+<div
+  class="pointer z-50 fixed bottom-4 left-4 bg-gray-900 bg-opacity-90 rounded-full px-4 py-2 flex items-center gap-3 select-none text-cyan-400 font-semibold text-lg shadow-lg
+         ring-2 ring-cyan-400 ring-opacity-40
+         hover:ring-opacity-80 transition-all duration-300 cursor-pointer "
+  aria-label="Friend List"
+  *ngIf="!startClicked"
+  title="Friend list - Not started yet"
+>
+  <svg
+    class="w-8 h-8 stroke-current stroke-1 fill-none"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <circle cx="12" cy="8" r="4" />
+    <path d="M6 20c0-3.33 5.33-5 6-5s6 1.67 6 5" />
+  </svg>
+  <span>{{ friendCount }}</span>
+</div>

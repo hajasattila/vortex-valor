@@ -22,6 +22,8 @@ import {CollectionComponent} from './pages/collection/collection.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import { FriendListComponent } from './components/friend-list/friend-list.component';
+import { BackButtonComponent } from './components/back-button/back-button.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -29,7 +31,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, RulesComponent, ShopComponent, CraftComponent, ProfileComponent, LobbyComponent, LeaderboardComponent, GameComponent, SettingsComponent, CollectionComponent],
+  declarations: [AppComponent, HomeComponent, RulesComponent, ShopComponent, CraftComponent, ProfileComponent, LobbyComponent, LeaderboardComponent, GameComponent, SettingsComponent, CollectionComponent, FriendListComponent, BackButtonComponent],
   imports: [
     BrowserModule,
     RouterModule,
