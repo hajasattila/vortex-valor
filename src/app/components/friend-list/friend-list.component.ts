@@ -11,13 +11,12 @@ export class FriendListComponent implements OnInit {
   startClicked = false;
 
   ngOnInit(): void {
-    // Ellenőrizzük a vv_startClicked cookie-t
     this.startClicked = this.getCookie('vv_startClicked') !== '';
   }
 
   private getCookie(name: string): string {
     const matches = document.cookie.match(new RegExp(
-      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+      "(?:^|; )" + name.replace(/([$?*|{}\[\]\\\/^])/g, '\\$1') + "=([^;]*)"
     ));
     return matches ? decodeURIComponent(matches[1]) : '';
   }
