@@ -5,6 +5,7 @@ import {
   ViewChild,
   ChangeDetectorRef, OnInit
 } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +22,7 @@ export class HomeComponent implements AfterViewInit, OnInit {
   showSpiral = false;
   showMenu = false;
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(private cdr: ChangeDetectorRef, protected router: Router) {}
 
   ngOnInit(): void {}
 
@@ -76,6 +77,7 @@ export class HomeComponent implements AfterViewInit, OnInit {
   openSettings(): void {
     console.log('Settings modal megnyitása (később implementálva)');
   }
+
 
   protected readonly Math = Math;
 }
